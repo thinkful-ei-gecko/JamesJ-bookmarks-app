@@ -8,16 +8,26 @@
 </head>
 <body>
   <h1>Bookmarker</h1>
-  <form id="bookmark">
-    <label for="title">Title: </label>
-    <input type="text" name="title" id="title" placeholder="My Awesome Site" required />
-    <label for="url">Bookmark URL: </label>
-    <input type="url" name="url" id="url" placeholder="http://site.com" required />
-    <label for="desc">Description: </label>
-    <input type="text" name="desc" id="desc" placeholder="Enter a summary for your bookmark"/>
-    <label for="rating">My Rating (1 - 5): </label>
-    <input type="number" name="rating" id="rating" min="1" max="5"/>
-  </form>
+  <section>
+    <h2>Add A Bookmark</h2>
+    <form id="bookmark">
+      <label for="title">Title: </label>
+      <input type="text" name="title" id="title" placeholder="My Awesome Site" required />
+      <label for="url">Bookmark URL: </label>
+      <input type="url" name="url" id="url" placeholder="http://site.com" required />
+      <label for="desc">Description: </label>
+      <input type="text" name="desc" id="desc" placeholder="Enter a summary for your bookmark"/>
+      <label for="rating">My Rating (1 - 5): </label>
+      <input type="number" name="rating" id="rating" min="1" max="5"/>
+      <button type="submit">Add</button>
+    </form>
+</section>
+<section>
+  <h2>My Bookmarks:</h2>
+  <ul class="js-bookmark-list">
+    <!--Bookmark list will render here-->
+  </ul>
+</section>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
