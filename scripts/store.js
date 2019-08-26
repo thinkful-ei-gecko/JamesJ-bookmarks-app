@@ -44,11 +44,7 @@ const store = function(){
   };
 
   return {
-    bookmarks: [
-      {id: 'foobar1', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: true},
-      {id: 'foobar2', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: false},
-      {id: 'foobar3', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: false}
-    ],
+    bookmarks: [],
     adding: false,
     filter: 0,
     addBookmark,

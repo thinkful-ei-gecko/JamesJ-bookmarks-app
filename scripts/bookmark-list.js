@@ -38,10 +38,22 @@ const bookmarkList = function(){
     });
   };
   // on click, delete an item
+  const handleBookmarkDelete = function(){
+    $('.js-bookmark-list').on('click', '#delete', e => {
+      let entryID = getItemIdFromElement(e.target);
+      api.deleteBookmark(entryID)
+        .then(res => res.json())
+        .then(resJSON => {
+          store.deleteBookmarkByID(entryID);
+          render();
+        });
+    });
+  };
 
   // package all event handlers
   const bindBookmarkListEventHandlers = function(){
     handleBookmarkClick();
+    handleBookmarkDelete();
   };
 
   return {
