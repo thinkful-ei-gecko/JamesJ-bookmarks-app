@@ -1,6 +1,6 @@
 'use strict';
 
-/* global store, api */
+/* global store, api, bookmarkList */
 
 // eslint-disable-next-line 
 const bookmarkForm = function(){
@@ -46,10 +46,19 @@ const bookmarkForm = function(){
     $('body').on('submit', '#bookmark-form', e => {
       e.preventDefault();
       let formData = new FormData(document.getElementById('bookmark-form'));
-      console.log(formData);
-      // api.createBookmark(formData)
-      //   .then(res => res.json())
-      //   .then(resJSON => console.log(resJSON));
+      let formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+      api.createBookmark(formObject)
+        .then(res => res.json())
+        .then(resJSON => {
+          console.log(resJSON);
+          store.adding = false;
+          render();
+          store.addBookmark(formObject);
+          bookmarkList.render();
+        });
 
 
     });

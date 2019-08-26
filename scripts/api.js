@@ -11,7 +11,10 @@ const api = (function(){
     return fetch(`${BASE_URL}/bookmarks`, 
       {
         method: 'POST',
-        body: bookmark
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bookmark)
       });
   };
 
