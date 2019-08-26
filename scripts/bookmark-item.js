@@ -9,7 +9,7 @@ const bookmarkItem = function(){
 
     if(obj.expanded) {
       return `
-      <li>
+      <li class="bookmark-expand">
         <h3>${obj.title}</h3>
         <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
         <textarea placeholder="No description provided" disabled>${obj.desc}</textarea>
@@ -19,7 +19,7 @@ const bookmarkItem = function(){
     }
 
     return `
-    <li>
+    <li class="bookmark">
       <h3>${obj.title}</h3>
       <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
     </li>
