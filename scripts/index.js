@@ -15,6 +15,8 @@ $('document').ready(function(){
   if(store.adding) {
     bookmarkForm.render();
   }
+  bookmarkList.bindBookmarkListEventHandlers();
+
 });
 
 console.log('store', store.bookmarks);

@@ -27,6 +27,12 @@ const store = function(){
     bookmark.editing = !bookmark.editing;
   };
 
+  // toggle expanded view for a bookmark
+  const toggleExpandBookmark = function(id){
+    let bookmark = this.bookmarks.find(bookmark => id === bookmark.id);
+    bookmark.expanded = !bookmark.expanded;
+  };
+
   // set filter to new value
   const updateRatingFilter = function(num = Number){
     this.filter = num;
@@ -44,12 +50,13 @@ const store = function(){
       {id: 'foobar3', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: false}
     ],
     adding: false,
-    filter: 4,
+    filter: 0,
     addBookmark,
     updateBookmark,
     deleteBookmarkByID,
     updateRatingFilter,
     toggleAddBookmarkForm,
-    toggleEditBookmark
+    toggleEditBookmark,
+    toggleExpandBookmark
   };
 }();

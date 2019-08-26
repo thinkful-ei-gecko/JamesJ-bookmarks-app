@@ -1,6 +1,6 @@
 'use strict';
 
-/* global store, bookmarkItem */
+/* global store, bookmarkItem, api */
 
 // eslint-disable-next-line 
 const bookmarkList = function(){
@@ -23,8 +23,29 @@ const bookmarkList = function(){
     $('.js-bookmark-list').html(listString);
   };
 
+  // retrieve data item from an element
+  function getItemIdFromElement(item) {
+    return $(item)
+      .closest('.bookmark, .bookmark-expand')
+      .data('bookmark-id');
+  }
+  // on click, toggle expand/collapse of bookmark item
+  const handleBookmarkClick = function(){
+    $('.js-bookmark-list').on('click', '.bookmark-expand, .bookmark', e => {
+      let entryID = getItemIdFromElement(e.target);
+      store.toggleExpandBookmark(entryID);
+      render();
+    });
+  };
+  // on click, delete an item
+
+  // package all event handlers
+  const bindBookmarkListEventHandlers = function(){
+    handleBookmarkClick();
+  };
 
   return {
+    bindBookmarkListEventHandlers,
     render
   };
 }();
