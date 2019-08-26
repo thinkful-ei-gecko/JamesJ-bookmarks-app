@@ -10,8 +10,14 @@ const bookmarkList = function(){
   // once store matches api, render store in DOM
 
   const render = function(){
+    let entries = [...store.bookmarks];
     let listString = '';
-    store.bookmarks.forEach(bookmark => {
+
+    if(store.filter) {
+      entries = entries.filter(entry => entry.rating >= store.filter);
+    }
+
+    entries.forEach(bookmark => {
       listString += bookmarkItem.createBookmarkHTML(bookmark);
     });
     $('.js-bookmark-list').html(listString);
