@@ -22,6 +22,8 @@ You have until the end of day Wednesday (8PM ET) to complete your project and su
   - description
   - rating (1-5)
 - [ ] I can see a list of my bookmarks when I first open the app
+- [ ] Form to add new bookmark should NOT be visible by default
+- [ ] Form should render on click of 'Add Bookmark' button
 - [ ] All bookmarks in the list default to a "condensed" view showing only title and rating
 - [ ] I can click on a bookmark to display the "detailed" view
 - [ ] Detailed view expands to additionally display description and a "Visit Site" link
