@@ -17,6 +17,7 @@ $('document').ready(function(){
   }
   bookmarkList.bindBookmarkListEventHandlers();
   bookmarkForm.handleAddBookmarkClick();
+  bookmarkForm.handleSubmitNewBookmark();
 
 });
 

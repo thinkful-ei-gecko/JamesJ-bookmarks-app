@@ -1,13 +1,12 @@
 'use strict';
 
-/* global store */
+/* global store, api */
 
 // eslint-disable-next-line 
 const bookmarkForm = function(){
   
   const render = function(){
     const form = `
-      <!--Use FormData() function native to JS for handling forms-->
       <form id="bookmark-form">
         <label for="title">Title: </label>
         <input type="text" name="title" id="title" placeholder="My Awesome Site" required />
@@ -41,8 +40,24 @@ const bookmarkForm = function(){
     });
   };
 
+  // on submit, send api request to add new bookmark
+  // use FormData() function native to JS for handling forms
+  const handleSubmitNewBookmark = function(){
+    $('body').on('submit', '#bookmark-form', e => {
+      e.preventDefault();
+      let formData = new FormData(document.getElementById('bookmark-form'));
+      console.log(formData);
+      // api.createBookmark(formData)
+      //   .then(res => res.json())
+      //   .then(resJSON => console.log(resJSON));
+
+
+    });
+  };
+
   return {
     render,
-    handleAddBookmarkClick
+    handleAddBookmarkClick,
+    handleSubmitNewBookmark
   };
 }();
