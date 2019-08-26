@@ -10,6 +10,7 @@ $('document').ready(function(){
     .then(bookmarks => 
       bookmarks.forEach(bookmark => {
         store.addBookmark(bookmark);
+        bookmarkList.render();
       }));
 });
 
