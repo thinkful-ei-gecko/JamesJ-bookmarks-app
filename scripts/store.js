@@ -35,7 +35,3 @@ const store = function(){
     deleteBookmarkByID
   };
 }();
-
-console.log(store.bookmarks);
-store.deleteBookmarkByID('foobar2');
-console.log(store.bookmarks);
