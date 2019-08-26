@@ -44,7 +44,6 @@ const store = function(){
       {id: 'foobar3', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false}
     ],
     adding: false,
-    editing: false,
     filter: 1,
     addBookmark,
     updateBookmark,
