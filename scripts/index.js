@@ -1,6 +1,6 @@
 'use strict';
 
-/* global store, api */
+/* global store, api, bookmarkList, bookmarkForm */
 
 
 $('document').ready(function(){
@@ -12,6 +12,9 @@ $('document').ready(function(){
         store.addBookmark(bookmark);
         bookmarkList.render();
       }));
+  if(store.adding) {
+    bookmarkForm.render();
+  }
 });
 
 console.log('store', store.bookmarks);

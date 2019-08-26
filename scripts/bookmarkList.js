@@ -1,6 +1,8 @@
 'use strict';
 
 /* global store, bookmarkItem */
+
+// eslint-disable-next-line 
 const bookmarkList = function(){
   
   // generate each bookmark from the api, after the store has been

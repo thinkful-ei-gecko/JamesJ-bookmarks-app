@@ -39,9 +39,9 @@ const store = function(){
 
   return {
     bookmarks: [
-      {id: 'foobar1', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false},
-      {id: 'foobar2', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false},
-      {id: 'foobar3', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false}
+      {id: 'foobar1', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: true},
+      {id: 'foobar2', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: false},
+      {id: 'foobar3', title: 'Test title', url: 'http://someplace.com', rating: 4, desc: 'Excellent desc.', editing: false, expanded: false}
     ],
     adding: false,
     filter: 1,
