@@ -1,12 +1,14 @@
 'use strict';
 
+/* global store */
+
 // eslint-disable-next-line 
 const bookmarkForm = function(){
   
   const render = function(){
     const form = `
       <!--Use FormData() function native to JS for handling forms-->
-      <form id="bookmark">
+      <form id="bookmark-form">
         <label for="title">Title: </label>
         <input type="text" name="title" id="title" placeholder="My Awesome Site" required />
         <label for="url">Bookmark URL: </label>
@@ -24,9 +26,23 @@ const bookmarkForm = function(){
         <button type="submit">Add</button>
       </form>
     `;
-    $('.js-bookmark-list').before(form);
+    if(store.adding) {
+      $('.js-bookmark-list').before(form);
+    } else {
+      $('#bookmark-form').remove();
+    }
   };
+
+  // on click, toggle display of the form
+  const handleAddBookmarkClick = function(){
+    $('#display-form').on('click', () => {
+      store.adding = !store.adding;
+      render();
+    });
+  };
+
   return {
-    render
+    render,
+    handleAddBookmarkClick
   };
 }();

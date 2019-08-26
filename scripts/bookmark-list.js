@@ -29,6 +29,7 @@ const bookmarkList = function(){
       .closest('.bookmark, .bookmark-expand')
       .data('bookmark-id');
   }
+  
   // on click, toggle expand/collapse of bookmark item
   const handleBookmarkClick = function(){
     $('.js-bookmark-list').on('click', '.bookmark-expand, .bookmark', e => {
