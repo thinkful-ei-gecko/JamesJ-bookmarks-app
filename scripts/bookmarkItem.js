@@ -11,8 +11,8 @@ const bookmarkItem = function(){
       return `
       <li>
         <h3>${obj.title}</h3>
-        <p>Rating: ${obj.rating}</p>
-        <textarea>${obj.desc}</textarea>
+        <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
+        <textarea placeholder="No description provided" disabled>${obj.desc}</textarea>
         <a href="${obj.url}">Visit Site</a>
       </li>
     `;
@@ -21,7 +21,7 @@ const bookmarkItem = function(){
     return `
     <li>
       <h3>${obj.title}</h3>
-      <p>Rating: ${obj.rating}</p>
+      <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
     </li>
   `;
   };
