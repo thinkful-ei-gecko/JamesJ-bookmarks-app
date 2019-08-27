@@ -53,14 +53,22 @@ const bookmarkForm = function(){
       api.createBookmark(formObject)
         .then(res => res.json())
         .then(resJSON => {
+          api.getBookmarks()
+            .then(res => res.json())
+            .then(bookmarks => {
+              store.bookmarks = [];
+              bookmarks.forEach( bookmark => {
+                store.addBookmark(bookmark);
+                bookmarkList.render();
+                return resJSON;
+              }
+              );});
+        })
+        .then(resJSON => {
           console.log(resJSON);
           store.adding = false;
           render();
-          store.addBookmark(formObject);
-          bookmarkList.render();
         });
-
-
     });
   };
 

@@ -30,6 +30,7 @@ const store = function(){
   // toggle expanded view for a bookmark
   const toggleExpandBookmark = function(id){
     let bookmark = this.bookmarks.find(bookmark => id === bookmark.id);
+    console.log(bookmark);
     bookmark.expanded = !bookmark.expanded;
   };
 

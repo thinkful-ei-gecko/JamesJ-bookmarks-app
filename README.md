@@ -48,3 +48,7 @@ You have until the end of day Wednesday (8PM ET) to complete your project and su
 - [ ] Follow a11y best practices
 
 Refer back to the lessons on accessibility, forms
+
+## Bugs List
+- [x] Clicking to expand a new bookmark doesn't work without refresh
+- [ ] Delete and expand actions look at same click event (need to rearrange HTML)
