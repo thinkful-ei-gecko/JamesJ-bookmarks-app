@@ -9,16 +9,16 @@ const bookmarkItem = function(){
     let stars = '';
     switch (obj.rating) {
     case 1:
-      stars = '&#x2606;&#x2606;&#x2606;&#x2606;&#x2605';
+      stars = '&#x2605&#x2606;&#x2606;&#x2606;&#x2606;';
       break;
     case 2:
-      stars = '&#x2606;&#x2606;&#x2606;&#x2605;&#x2605';
+      stars = '&#x2605;&#x2605&#x2606;&#x2606;&#x2606;';
       break;
     case 3:
-      stars = '&#x2606;&#x2606;&#x2605;&#x2605;&#x2605';
+      stars = '&#x2605;&#x2605;&#x2605&#x2606;&#x2606;';
       break;
     case 4:
-      stars = '&#x2606;&#x2605;&#x2605;&#x2605;&#x2605';
+      stars = '&#x2605;&#x2605;&#x2605;&#x2605&#x2606;';
       break;
     case 5:
       stars = '&#x2605;&#x2605;&#x2605;&#x2605;&#x2605';

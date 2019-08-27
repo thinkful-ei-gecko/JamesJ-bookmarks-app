@@ -7,9 +7,16 @@ h1, h2 {
 }
 
 .bookmark-list-tools {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookmark-list-tools > select {
+  border: 2px solid grey;
 }
 
 ul {
@@ -47,7 +54,7 @@ li {
 
 #display-form, form > button {
   color: white;
-  background: rgb(77, 77, 200);
+  background: black;
 }
 
 .hide-button {
@@ -92,7 +99,6 @@ input {
 }
 
 form > select {
-  direction: rtl;
   border: 2px solid grey;
   padding: 5px;
 }
