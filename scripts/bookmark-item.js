@@ -14,7 +14,7 @@ const bookmarkItem = function(){
         <div data-bookmark-id="${obj.id}" class="bookmark-expand">
           <h3>${obj.title}</h3>
           <p class="rating">Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
-          <p placeholder="No description provided" disabled>${obj.desc}</p>
+          <p class="desc" placeholder="No description provided" disabled>${obj.desc = obj.desc ? obj.desc : 'No description provided'}</p>
           <a href="${obj.url}">Visit Site</a>
         </div>
       </li>
@@ -26,7 +26,7 @@ const bookmarkItem = function(){
       <button id="delete">x</button>
       <div data-bookmark-id="${obj.id}" class="bookmark-collapse">
         <h3>${obj.title}</h3>
-        <p class="rating">Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
+        <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
       </div>
     </li>
   `;
