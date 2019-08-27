@@ -127,7 +127,7 @@ form > button {
 
   li {
     display: inline-flex;
-    width: 18%;
+    width: 24%;
     margin: 2px;
   }
 
@@ -141,5 +141,14 @@ form > button {
 
   li > button {
     border: none;
+  }
+
+  #display-form {
+    width: 60%;
+  }
+
+  #bookmark-form {
+    width: 60%;
+    margin: 0 auto; 
   }
 }
