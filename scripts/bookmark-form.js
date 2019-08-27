@@ -23,12 +23,15 @@ const bookmarkForm = function(){
           <option value="1">1</option>
         </select>
         <button type="submit">Add</button>
+        <button type="reset">Cancel</button>
       </form>
     `;
     if(store.adding) {
-      $('.js-bookmark-list').before(form);
+      $('.js-bookmark-list').after(form);
+      $('#display-form').toggleClass('hide-button');
     } else {
       $('#bookmark-form').remove();
+      $('#display-form').toggleClass('hide-button');
     }
   };
 
@@ -36,6 +39,15 @@ const bookmarkForm = function(){
   const handleAddBookmarkClick = function(){
     $('#display-form').on('click', () => {
       store.adding = !store.adding;
+      render();
+    });
+  };
+
+  // on form reset, hide form and restore default view
+  const handleFormCancel = function(){
+    $('body').on('reset', '#bookmark-form', e => {
+      e.preventDefault();
+      store.adding = false;
       render();
     });
   };
@@ -72,9 +84,14 @@ const bookmarkForm = function(){
     });
   };
 
+  const bindFormEventListeners = function(){
+    handleAddBookmarkClick();
+    handleSubmitNewBookmark();
+    handleFormCancel();
+  };
+
   return {
     render,
-    handleAddBookmarkClick,
-    handleSubmitNewBookmark
+    bindFormEventListeners
   };
 }();

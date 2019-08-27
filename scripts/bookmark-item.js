@@ -13,7 +13,7 @@ const bookmarkItem = function(){
         <div data-bookmark-id="${obj.id}" class="bookmark-expand">
           <h3>${obj.title}</h3>
           <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
-          <textarea placeholder="No description provided" disabled>${obj.desc}</textarea>
+          <p placeholder="No description provided" disabled>${obj.desc}</p>
           <a href="${obj.url}">Visit Site</a>
         </div>
         <button id="delete">Delete</button>

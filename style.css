@@ -6,9 +6,17 @@ h1, h2 {
   text-align: center;
 }
 
+.bookmark-list-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 ul {
   list-style-type: none;
   padding: 2%;
+  max-height: 400px;
+  overflow: scroll;
 }
 
 .bookmark-collapse {
@@ -26,4 +34,16 @@ li {
 button {
   color: white;
   background: blue;
+}
+
+.hide-button {
+  opacity: 0;
+}
+
+#display-form {
+  display: block;
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
 }

@@ -14,8 +14,7 @@ $('document').ready(function(){
     bookmarkForm.render();
   }
   bookmarkList.bindBookmarkListEventHandlers();
-  bookmarkForm.handleAddBookmarkClick();
-  bookmarkForm.handleSubmitNewBookmark();
+  bookmarkForm.bindFormEventListeners();
   console.log('index.js is loaded');
 });
 
