@@ -108,3 +108,33 @@ form > button {
  margin-top: 5px;
  justify-self: space-between;
 }
+
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+  ul {
+    max-height: 550px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  ul {
+    max-height: 450px;
+  }
+
+  li {
+    display: inline-flex;
+    width: 18%;
+    margin: 2px;
+  }
+
+  .bookmark-list-tools {
+    justify-content: flex-end;
+  }
+
+  .bookmark-list-tools > * {
+    margin-left: 5px;
+  }
+
+  li > button {
+    border: none;
+  }
+}
