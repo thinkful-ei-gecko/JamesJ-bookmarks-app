@@ -19,19 +19,32 @@ ul {
   overflow: scroll;
 }
 
-.bookmark-collapse {
+/* .bookmark-collapse {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 10px;
-}
+} */
 
 li {
   border: 2px solid black;
   margin: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
-button {
+.bookmark-expand, .bookmark-collapse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.rating {
+  align-self: flex-end;
+}
+
+#display-form, form > button {
   color: white;
   background: blue;
 }
@@ -46,4 +59,10 @@ button {
   height: 50px;
   text-align: center;
   margin: 0 auto;
+}
+
+#delete {
+  align-self: flex-end;
+  color: red;
+  padding-top: 2px
 }
