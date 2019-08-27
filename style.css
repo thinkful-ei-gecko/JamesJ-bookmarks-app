@@ -1,0 +1,29 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 2%;
+}
+
+.bookmark-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+li {
+  border: 2px solid black;
+  margin: 4px;
+}
+
+button {
+  color: white;
+  background: blue;
+}
