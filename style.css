@@ -39,6 +39,11 @@ li {
   flex-direction: column;
 }
 
+li > button {
+  border: none;
+  background-color: white;
+}
+
 .bookmark-expand, .bookmark-collapse {
   display: flex;
   flex-wrap: wrap;
@@ -137,10 +142,6 @@ form > button {
 
   .bookmark-list-tools > * {
     margin-left: 5px;
-  }
-
-  li > button {
-    border: none;
   }
 
   #display-form {

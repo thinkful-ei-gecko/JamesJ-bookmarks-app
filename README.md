@@ -54,3 +54,5 @@ Refer back to the lessons on accessibility, forms
 - [x] Delete and expand actions look at same click event (need to rearrange HTML)
 - [ ] Implement API error/response handling
 - [ ] Cleanup CSS to not use IDs for styling anything
+- [ ] Empty state when no bookmarks exist
+- [ ] Find a way to render form better (in general? for desktop?)
