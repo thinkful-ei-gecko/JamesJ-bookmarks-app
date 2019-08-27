@@ -9,7 +9,7 @@ h1, h2 {
 .bookmark-list-tools {
   width: 90%;
   margin: 0 auto;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -116,6 +116,11 @@ form > button {
 }
 
 @media screen and (min-width: 1025px) {
+  h1 {
+    padding-left: 2%;
+    text-align: left;
+    display: inline-block;
+  }
   ul {
     max-height: 450px;
   }
