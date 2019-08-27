@@ -9,11 +9,13 @@ const bookmarkItem = function(){
 
     if(obj.expanded) {
       return `
-      <li data-bookmark-id="${obj.id}" class="bookmark-expand">
-        <h3>${obj.title}</h3>
-        <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
-        <textarea placeholder="No description provided" disabled>${obj.desc}</textarea>
-        <a href="${obj.url}">Visit Site</a>
+      <li data-bookmark-id="${obj.id}" class="bookmark">
+        <div data-bookmark-id="${obj.id}" class="bookmark-expand">
+          <h3>${obj.title}</h3>
+          <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
+          <textarea placeholder="No description provided" disabled>${obj.desc}</textarea>
+          <a href="${obj.url}">Visit Site</a>
+        </div>
         <button id="delete">Delete</button>
       </li>
     `;
@@ -21,8 +23,10 @@ const bookmarkItem = function(){
 
     return `
     <li data-bookmark-id="${obj.id}" class="bookmark">
-      <h3>${obj.title}</h3>
-      <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
+      <div data-bookmark-id="${obj.id}" class="bookmark-collapse">
+        <h3>${obj.title}</h3>
+        <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
+      </div>
       <button id="delete">Delete</button>
     </li>
   `;

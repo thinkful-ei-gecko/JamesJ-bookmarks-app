@@ -26,13 +26,13 @@ const bookmarkList = function(){
   // retrieve data item from an element
   function getItemIdFromElement(item) {
     return $(item)
-      .closest('.bookmark, .bookmark-expand')
+      .closest('.bookmark-collapse, .bookmark-expand, .bookmark')
       .data('bookmark-id');
   }
-  
+
   // on click, toggle expand/collapse of bookmark item
   const handleBookmarkClick = function(){
-    $('.js-bookmark-list').on('click', '.bookmark-expand, .bookmark', e => {
+    $('.js-bookmark-list').on('click', '.bookmark-expand, .bookmark-collapse', e => {
       let entryID = getItemIdFromElement(e.target);
       store.toggleExpandBookmark(entryID);
       render();
