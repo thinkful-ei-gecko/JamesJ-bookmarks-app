@@ -38,17 +38,19 @@ You have until the end of day Wednesday (8PM ET) to complete your project and su
 - [x] Use namespacing to adhere to good architecture practices
 - [x] Minimal global variables
 - [x] Create modules in separate files to organize your code
-- [ ] Logically group your functions (e.g. API methods, store methods...)
+- [x] Logically group your functions (e.g. API methods, store methods...)
 - [ ] Keep your Data out of the DOM
-- [ ] No direct DOM manipulation in your event handlers!
-- [ ] Follow the React-ful design pattern - change your state, re-render your component
+- [x] No direct DOM manipulation in your event handlers!
+- [x] Follow the React-ful design pattern - change your state, re-render your component
 - [ ] Use semantic HTML
-- [ ] Use responsive design
-- [ ] Visually and functionally solid in viewports for mobile and desktop
+- [x] Use responsive design
+- [x] Visually and functionally solid in viewports for mobile and desktop
 - [ ] Follow a11y best practices
 
 Refer back to the lessons on accessibility, forms
 
-## Bugs List
+## To-Do List
 - [x] Clicking to expand a new bookmark doesn't work without refresh
 - [x] Delete and expand actions look at same click event (need to rearrange HTML)
+- [ ] Implement API error/response handling
+- [ ] Cleanup CSS to not use IDs for styling anything

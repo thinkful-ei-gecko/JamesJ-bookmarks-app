@@ -4,7 +4,6 @@
 const bookmarkItem = function(){
   
   // produce the HTML needed to render a bookmark within the DOM
-
   const createBookmarkHTML = function(obj){
     let stars = '';
     switch (obj.rating) {
