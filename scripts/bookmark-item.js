@@ -6,6 +6,26 @@ const bookmarkItem = function(){
   // produce the HTML needed to render a bookmark within the DOM
 
   const createBookmarkHTML = function(obj){
+    let stars = '';
+    switch (obj.rating) {
+    case 1:
+      stars = '&#x2606;&#x2606;&#x2606;&#x2606;&#x2605';
+      break;
+    case 2:
+      stars = '&#x2606;&#x2606;&#x2606;&#x2605;&#x2605';
+      break;
+    case 3:
+      stars = '&#x2606;&#x2606;&#x2605;&#x2605;&#x2605';
+      break;
+    case 4:
+      stars = '&#x2606;&#x2605;&#x2605;&#x2605;&#x2605';
+      break;
+    case 5:
+      stars = '&#x2605;&#x2605;&#x2605;&#x2605;&#x2605';
+      break;
+    default:
+      stars = 'N/A';
+    }
 
     if(obj.expanded) {
       return `
@@ -13,7 +33,7 @@ const bookmarkItem = function(){
         <button id="delete">x</button>
         <div data-bookmark-id="${obj.id}" class="bookmark-expand">
           <h3>${obj.title}</h3>
-          <p class="rating">Rating: ${obj.rating = obj.rating ? obj.rating : 'None provided'}</p>
+          <p class="rating">${stars}</p>
           <p class="desc" placeholder="No description provided" disabled>${obj.desc = obj.desc ? obj.desc : 'No description provided'}</p>
           <a href="${obj.url}">Visit Site</a>
         </div>
@@ -26,7 +46,7 @@ const bookmarkItem = function(){
       <button id="delete">x</button>
       <div data-bookmark-id="${obj.id}" class="bookmark-collapse">
         <h3>${obj.title}</h3>
-        <p>Rating: ${obj.rating = obj.rating ? obj.rating : 'N/A'}</p>
+        <p>${stars}</p>
       </div>
     </li>
   `;

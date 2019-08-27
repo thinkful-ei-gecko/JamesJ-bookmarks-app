@@ -47,7 +47,7 @@ li {
 
 #display-form, form > button {
   color: white;
-  background: blue;
+  background: rgb(77, 77, 200);
 }
 
 .hide-button {
@@ -66,4 +66,39 @@ li {
   align-self: flex-end;
   color: red;
   padding-top: 2px
+}
+
+#bookmark-form {
+  border: 2px solid black;
+  margin: 12px; 
+  padding: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+form > label, input, form > select {
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  text-align: center;
+  width: 100%;
+  border: 2px solid grey;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+form > select {
+  direction: rtl;
+  border: 2px solid grey;
+  padding: 5px;
+}
+
+form > button {
+ width: 40%;
+ margin-top: 5px;
+ justify-self: space-between;
 }
