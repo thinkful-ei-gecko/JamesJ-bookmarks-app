@@ -2,9 +2,7 @@
 
 /* global store, api, bookmarkList, bookmarkForm */
 
-
 $('document').ready(function(){
-  console.log('index.js is loading');
   api.getBookmarks()
     .then(res => res.json())
     .then(bookmarks => 
@@ -18,7 +16,7 @@ $('document').ready(function(){
   bookmarkList.bindBookmarkListEventHandlers();
   bookmarkForm.handleAddBookmarkClick();
   bookmarkForm.handleSubmitNewBookmark();
-
+  console.log('index.js is loaded');
 });
 
 console.log('store', store.bookmarks);

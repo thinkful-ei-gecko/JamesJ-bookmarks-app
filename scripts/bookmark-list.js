@@ -38,6 +38,7 @@ const bookmarkList = function(){
       render();
     });
   };
+
   // on click, delete an item
   const handleBookmarkDelete = function(){
     $('.js-bookmark-list').on('click', '#delete', e => {
@@ -51,10 +52,21 @@ const bookmarkList = function(){
     });
   };
 
+  // on update of rating filter, render only bookmarks greater than
+  // or equal to the rating chosen
+  const handleRatingFilterChange = function(){
+    $('#rating-filter').on('change', e => {
+      let newRating = e.target.value;
+      store.filter = newRating;
+      render();
+    });
+  };
+
   // package all event handlers
   const bindBookmarkListEventHandlers = function(){
     handleBookmarkClick();
     handleBookmarkDelete();
+    handleRatingFilterChange();
   };
 
   return {

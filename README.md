@@ -51,4 +51,4 @@ Refer back to the lessons on accessibility, forms
 
 ## Bugs List
 - [x] Clicking to expand a new bookmark doesn't work without refresh
-- [ ] Delete and expand actions look at same click event (need to rearrange HTML)
+- [x] Delete and expand actions look at same click event (need to rearrange HTML)
