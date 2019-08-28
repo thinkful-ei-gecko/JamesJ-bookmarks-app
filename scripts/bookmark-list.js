@@ -48,7 +48,8 @@ const bookmarkList = function(){
         .then(resJSON => {
           store.deleteBookmarkByID(entryID);
           render();
-        });
+        })
+        .catch(error => console.log(error));
     });
   };
 

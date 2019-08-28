@@ -9,7 +9,8 @@ $('document').ready(function(){
       bookmarks.forEach(bookmark => {
         store.addBookmark(bookmark);
         bookmarkList.render();
-      }));
+      }))
+    .catch(error => console.log(error));
   if(store.adding) {
     bookmarkForm.render();
   }

@@ -29,7 +29,7 @@ You have until the end of day Wednesday (8PM ET) to complete your project and su
 - [x] Detailed view expands to additionally display description and a "Visit Site" link
 - [x] I can remove bookmarks from my bookmark list
 - [x] I receive appropriate feedback when I cannot submit a bookmark
-- [ ] Check all validations in the API documentation (e.g. title and url field required)
+- [x] Check all validations in the API documentation (e.g. title and url field required)
 - [x] I can select from a dropdown a "minimum rating" to filter the list by all bookmarks rated at or above the chosen selection
 - [ ] (Extension) I can edit the rating and description of a bookmark in my list
 
@@ -39,10 +39,10 @@ You have until the end of day Wednesday (8PM ET) to complete your project and su
 - [x] Minimal global variables
 - [x] Create modules in separate files to organize your code
 - [x] Logically group your functions (e.g. API methods, store methods...)
-- [ ] Keep your Data out of the DOM
+- [x] Keep your Data out of the DOM
 - [x] No direct DOM manipulation in your event handlers!
 - [x] Follow the React-ful design pattern - change your state, re-render your component
-- [ ] Use semantic HTML
+- [x] Use semantic HTML
 - [x] Use responsive design
 - [x] Visually and functionally solid in viewports for mobile and desktop
 - [ ] Follow a11y best practices
@@ -52,7 +52,6 @@ Refer back to the lessons on accessibility, forms
 ## To-Do List
 - [x] Clicking to expand a new bookmark doesn't work without refresh
 - [x] Delete and expand actions look at same click event (need to rearrange HTML)
-- [ ] Implement API error/response handling
+- [x] Implement API error/response handling
 - [ ] Cleanup CSS to not use IDs for styling anything
 - [ ] Empty state when no bookmarks exist
-- [ ] Find a way to render form better (in general? for desktop?)

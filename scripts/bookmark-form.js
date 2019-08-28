@@ -74,13 +74,15 @@ const bookmarkForm = function(){
                 bookmarkList.render();
                 return resJSON;
               }
-              );});
+              );})
+            .catch(error => console.log(error));
         })
         .then(resJSON => {
           console.log(resJSON);
           store.adding = false;
           render();
-        });
+        })
+        .catch(error => console.log(error));
     });
   };
 

@@ -1,4 +1,4 @@
-'use strict';
+'use-strict';
 
 // eslint-disable-next-line
 const api = (function(){
@@ -15,12 +15,24 @@ const api = (function(){
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(bookmark)
+      })
+      .then(res => {
+        if(res.ok) {
+          return res;
+        }
+        throw new Error('Something went wrong', res);
       });
   };
 
   // return a fetch promise for a GET request
   const getBookmarks = function(){
-    return fetch(`${BASE_URL}/bookmarks`);
+    return fetch(`${BASE_URL}/bookmarks`)
+      .then(res => {
+        if(res.ok) {
+          return res;
+        }
+        throw new Error('Something went wrong', res);
+      });
   };
 
   // return a fetch promise for a PATCH request
@@ -32,6 +44,12 @@ const api = (function(){
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(options)
+      })
+      .then(res => {
+        if(res.ok) {
+          return res;
+        }
+        throw new Error('Something went wrong', res);
       });
   };
 
@@ -43,6 +61,12 @@ const api = (function(){
         headers: {
           'Content-Type': 'application/json'
         }
+      })
+      .then(res => {
+        if(res.ok) {
+          return res;
+        }
+        throw new Error('Something went wrong', res);
       });
   };
   
@@ -53,8 +77,3 @@ const api = (function(){
     deleteBookmark
   };
 })();
-
-// testing
-api.getBookmarks()
-  .then(res => res.json())
-  .then(json => console.log(json));
