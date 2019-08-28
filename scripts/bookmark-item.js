@@ -29,7 +29,7 @@ const bookmarkItem = function(){
     if(obj.expanded) {
       return `
       <li data-bookmark-id="${obj.id}" class="bookmark">
-        <button id="delete">x</button>
+        <button id="delete" class="delete">x</button>
         <div data-bookmark-id="${obj.id}" class="bookmark-expand">
           <h3>${obj.title}</h3>
           <p class="rating">${stars}</p>
@@ -42,7 +42,7 @@ const bookmarkItem = function(){
 
     return `
     <li data-bookmark-id="${obj.id}" class="bookmark">
-      <button id="delete">x</button>
+      <button id="delete" class="delete">x</button>
       <div data-bookmark-id="${obj.id}" class="bookmark-collapse">
         <h3>${obj.title}</h3>
         <p>${stars}</p>

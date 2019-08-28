@@ -7,7 +7,7 @@ const bookmarkForm = function(){
   
   const render = function(){
     const form = `
-      <form id="bookmark-form">
+      <form id="bookmark-form" class="bookmark-form">
         <label for="title">Title</label>
         <input type="text" name="title" id="title" placeholder="My Awesome Site" required />
         <label for="url">Bookmark URL</label>
