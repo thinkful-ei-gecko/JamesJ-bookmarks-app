@@ -128,12 +128,7 @@ form > button {
   }
   ul {
     max-height: 450px;
-  }
-
-  li {
-    display: inline-flex;
-    width: 24%;
-    margin: 2px;
+    padding: 0 8%;
   }
 
   .bookmark-list-tools {
